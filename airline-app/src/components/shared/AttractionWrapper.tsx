@@ -49,7 +49,7 @@ const AttractionWrapper = () => {
     ];
   return (<>
     <Attraction title="Trending US destinations" data={shuffledData} />
-    <Attraction title="Trending beach destinations" data={data} />
+    <Attraction title=" Beach destinations" data={data} />
     <Attraction title="Visit friends & family" data={shuffledData} />
 
   </>

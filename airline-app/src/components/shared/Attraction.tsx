@@ -13,7 +13,7 @@ export const Attraction = ({ title, data }: Props) => {
   return (
     <>
       <p className="text-3xl text-left mt-8 ml-5 ">{title}</p>
-      <div className="flex overflow-x-auto space-x-4 px-10 py-2 mt-10">
+      <div className="flex overflow-x-auto space-x-4 px-6 py-2 mt-10">
         {data.map((item) => (
           <div key={item.id} className="flex-shrink-0  w-[70vw] h-[80vh] relative md:w-[30vw] lg:w-[30vw]">
             <Image
