@@ -1,7 +1,7 @@
 
 const Catchy = () => {
   return (
-    <div>Catchy</div>
+    <div></div>
   )
 }
 
