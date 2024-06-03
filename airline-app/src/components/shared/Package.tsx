@@ -6,21 +6,21 @@ const data = [
     id: 0,
     butt: "Where will you go?",
     title: "City breaks",
-    name: "Check out our fabulous city escapes, and enjoy a few days (or more!) of shopping, sightseeing, and skyscrapers.",
+    name: "Check out our fabulous city escapes, and enjoy a few days (or more!) of shopping and skyscrapers.",
     img: "https://images.unsplash.com/photo-1440778303588-435521a205bc?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG9saWRheSUyMHRyYXZlbHxlbnwwfHwwfHx8Mg%3D%3D",
   },
   {
     id: 1,
     butt: "Find your 2024 trip",
     title: "Visit loved ones",
-    name: "Make 2024 a year to remember, by booking a trip to see the ones you love. We've got great deals on our most popular routes.",
+    name: "Make 2024 a year to remember, by booking a trip to see the ones you love. ",
     img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFyaXN8ZW58MHx8MHx8fDI%3D",
   },
   {
     id: 2,
     butt: "Soar into Summer",
-    title: "Plan an unforgettable Summer",
-    name: "Whether you want to spend long days lazing on a Caribbean beach, or keep the kids busy in sunny Florida, we're here to take you away.",
+    title: "Best Summer",
+    name: "Whether you want to spend long days lazing on a Caribbean beach, or keep the kids busy in sunny Florida, we'r.",
     img: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hbGRpdmVzfGVufDB8fDB8fHwy",
   },
   {
@@ -47,9 +47,9 @@ const data = [
 
 export const Package = () => {
   return (
-    <div className="p-10 mt-10 md:flex lg:flex ">
+    <div className="p-10 mt-10 md:flex lg:flex overflow-x-auto">
       {data.map((item) => (
-        <div key={item.id} className=" w-[80vw]  mb-10 md:w-[20vw] lg:w-[20vw] ">
+        <div key={item.id} className=" w-[80vw]  mb-10 md:w-[30vw] lg:w-[30vw] p-5  ">
           <img
             src={item.img}
             alt={item.name}
@@ -58,7 +58,7 @@ export const Package = () => {
             <p className="text-3xl my-5 text-black">{item.title}</p>
             <p className="text-black mt-2">{item.name}</p>
             <Button
-            className="bg-white border-pri rounded-sm w-[80vw] mt-5 mx-auto flex text-pri "
+            className="bg-white border-pri rounded-sm w-[80vw] mt-5 mx-auto flex text-pri md:w-[20vw] lg:w-[20vw]"
             variant="outline"
           >
             {item.butt}
