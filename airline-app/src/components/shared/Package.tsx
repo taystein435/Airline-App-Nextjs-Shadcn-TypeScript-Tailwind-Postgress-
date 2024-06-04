@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -42,30 +43,38 @@ const data = [
     butt: "Discover Upper Class",
     title: "Upper Class",
     name: "We’ve taken the time to consider every last detail of your journey so you don't have to.",
-    img: "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxob2xpZGF5JTIwdHJhdmVsJTIwc21pbGV8ZW58MHx8MHx8fDI%3D" },
+    img: "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxob2xpZGF5JTIwdHJhdmVsJTIwc21pbGV8ZW58MHx8MHx8fDI%3D",
+  },
 ];
 
 export const Package = () => {
   return (
-    <div className="p-10 mt-10 md:flex lg:flex overflow-x-auto">
-      {data.map((item) => (
-        <div key={item.id} className=" w-[80vw]  mb-10 md:w-[30vw] lg:w-[30vw] p-5  ">
-          <img
-            src={item.img}
-            alt={item.name}
-            className="rounded-2xl h-[30vh] w-[80vw] object-cover"
-          />
+    <>
+      <p className="text-3xl text-left mt-8 ml-5 md:text-center md:text-5xl lg:text-center lg:text-5xl">
+        What's hot?
+      </p>
+      <div className="p-10  md:flex lg:flex overflow-x-auto">
+        {data.map((item) => (
+          <div
+            key={item.id}
+            className=" w-[80vw]  mb-10 md:w-[30vw] lg:w-[30vw] p-5  "
+          >
+            <img
+              src={item.img}
+              alt={item.name}
+              className="rounded-2xl h-[30vh] w-[80vw] object-cover"
+            />
             <p className="text-3xl my-5 text-black">{item.title}</p>
             <p className="text-black mt-2">{item.name}</p>
             <Button
-            className="bg-white border-pri rounded-sm w-[80vw] mt-5 mx-auto flex text-pri md:w-[20vw] lg:w-[20vw]"
-            variant="outline"
-          >
-            {item.butt}
-          </Button>
+              className="bg-white border-pri rounded-sm w-[80vw] mt-5 mx-auto flex text-pri md:w-[20vw] lg:w-[20vw]"
+              variant="outline"
+            >
+              {item.butt}
+            </Button>
           </div>
-        
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };

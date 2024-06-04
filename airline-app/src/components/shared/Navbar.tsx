@@ -1,15 +1,12 @@
-import { BaggageClaim, Link2, Menu, UserRound } from "lucide-react";
+import { BaggageClaim, Menu, UserRound } from "lucide-react";
 import Image from "next/image";
 import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "../ui/sheet";
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
@@ -55,26 +52,34 @@ export const Navbar = () => {
         alt="logo"
         className="p-2"
       />
-      <div className="flex justify-around gap-6 px-6 ">
+      <div className="flex justify-around gap-6 px-6">
         <Sheet>
           <SheetTrigger asChild>
-            <UserRound />
+            <UserRound className="cursor-pointer" />
           </SheetTrigger>
           <SheetContent className="">
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+            <SignedOut>
+              <Button asChild className="bg-pri w-[50vw] my-5 text-white border-none" variant="outline">
+                <SignInButton />
+              </Button>
+            </SignedOut>
             <Link href="/">
-              <h1 className="pt-10 ">Flying Club</h1>
+              <h1 className="pt-10">Flying Club</h1>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">My account</p>
+              <p className="pt-5">My account</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Reward seat deals</p>
+              <p className="pt-5">Reward seat deals</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Reward seat checker</p>
+              <p className="pt-5">Reward seat checker</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">About Flying Club</p>
+              <p className="pt-5">About Flying Club</p>
             </Link>
             <Link href="/">
               <p className="pt-5">Join Flying Club</p>
@@ -83,42 +88,42 @@ export const Navbar = () => {
         </Sheet>
         <Sheet>
           <SheetTrigger asChild>
-            <BaggageClaim />
+            <BaggageClaim className="cursor-pointer" />
           </SheetTrigger>
           <SheetContent className="">
             <Link href="/">
-              <h1 className="pt-10 ">My booking</h1>
+              <h1 className="pt-10">My booking</h1>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Manage booking</p>
+              <p className="pt-5">Manage booking</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Check in</p>
+              <p className="pt-5">Check in</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Flight status</p>
+              <p className="pt-5">Flight status</p>
             </Link>
           </SheetContent>
         </Sheet>
         <Sheet>
           <SheetTrigger asChild>
-            <Menu />
+            <Menu className="cursor-pointer" />
           </SheetTrigger>
           <SheetContent className="">
             <Link href="/">
-              <h1 className="pt-10 ">Where we fly</h1>
+              <h1 className="pt-10">Where we fly</h1>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Manage booking</p>
+              <p className="pt-5">Manage booking</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Deals</p>
+              <p className="pt-5">Deals</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Extras</p>
+              <p className="pt-5">Extras</p>
             </Link>
             <Link href="/">
-              <p className="pt-5 ">Help</p>
+              <p className="pt-5">Help</p>
             </Link>
             <div className="flex overflow-x-auto space-x-4 py-2 mt-10">
               {data.map((item) => (
@@ -130,7 +135,9 @@ export const Navbar = () => {
                     objectFit="cover"
                     className="rounded-2xl"
                   />
-                  <p className="absolute top-4 left-6 text-2xl text-white text-center">{item.name}</p>
+                  <p className="absolute top-4 left-6 text-2xl text-white text-center">
+                    {item.name}
+                  </p>
                 </div>
               ))}
             </div>

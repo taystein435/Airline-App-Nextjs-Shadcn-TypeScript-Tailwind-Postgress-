@@ -3,7 +3,7 @@ import {  FacebookIcon, InstagramIcon, X, YoutubeIcon } from "lucide-react";
 export const Footer = () => {
   return (
     <div className=" bg-slate-900 text-center py-9 md:flex justify-between lg:flex justify-around">
-      <div className=" text-white text-2xl py-9 ">
+      <div className=" text-white text-2xl py-9 space-y-2">
         <p className="">Where we fly</p>
         <p className="">Experience</p>
         <p className="">Deals</p>
