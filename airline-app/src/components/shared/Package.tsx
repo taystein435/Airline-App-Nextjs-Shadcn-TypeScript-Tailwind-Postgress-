@@ -45,6 +45,13 @@ const data = [
     name: "We’ve taken the time to consider every last detail of your journey so you don't have to.",
     img: "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxob2xpZGF5JTIwdHJhdmVsJTIwc21pbGV8ZW58MHx8MHx8fDI%3D",
   },
+  {
+    id: 6,
+    butt: "Discover Upper Class",
+    title: "Upper Class",
+    name: "We’ve taken the time to consider every last detail of your journey so you don't have to.",
+    img: "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxob2xpZGF5JTIwdHJhdmVsJTIwc21pbGV8ZW58MHx8MHx8fDI%3D",
+  },
 ];
 
 export const Package = () => {
